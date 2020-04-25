@@ -14,6 +14,9 @@ dalvik.vm.dex2oat64.enabled=true
 # Camera
 persist.vendor.camera.expose.aux=1
 
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # DPM
 persist.vendor.dpm.feature=11
 
