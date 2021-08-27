@@ -263,7 +263,7 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/power/config/lahaina/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 $(call soong_config_set,qtipower,tap_to_wake_node,/proc/touchpanel/double_tap_enable)
 
