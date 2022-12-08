@@ -246,6 +246,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,qtipower,tap_to_wake_node,/proc/touchpanel/double_tap_enable)
 
+# Performance
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
 # QTI fwk-detect
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor # Needed by CNE app
