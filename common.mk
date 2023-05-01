@@ -305,7 +305,7 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/oplus \
-    hardware/pixelworks/interfaces
+    hardware/pixelworks/interfaces \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
