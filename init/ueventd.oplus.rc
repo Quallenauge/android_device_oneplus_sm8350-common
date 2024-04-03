@@ -18,3 +18,7 @@
 
 # WiFi
 firmware_directories /odm/etc/wifi/
+
+/dev/cpuctl/foreground/cpu.uclamp.min                   0660    system    system
+/dev/cpuctl/top-app/cpu.uclamp.min                      0660    system    system
+/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive        0660    system    system
