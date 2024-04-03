@@ -180,6 +180,26 @@ service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
     class core
     oneshot
 
+# powerhal cannot write to /proc/sys files,
+# and chown/chmod does not work for /proc/sys/ entries.
+# So proxy writes through init.
+on property:vendor.powerhal.sched_prefer_spread=*
+    write /proc/sys/kernel/sched_prefer_spread ${vendor.powerhal.sched_prefer_spread}
+
+on property:vendor.powerhal.sched_busy_hyst_ns=*
+    write /proc/sys/kernel/sched_busy_hyst_ns ${vendor.powerhal.sched_busy_hyst_ns}
+
+on property:sched_busy_hysteresis_enable_cpus=*
+    write /proc/sys/kernel/sched_busy_hysteresis_enable_cpus ${vendor.powerhal.sched_busy_hysteresis_enable_cpus}
+
+on property:vendor.powerhal.sched_min_task_util_for_boost=*
+    write /proc/sys/kernel/sched_min_task_util_for_boost ${vendor.powerhal.sched_min_task_util_for_boost}
+
+on property:sched_min_task_util_for_colocation=*
+    write /proc/sys/kernel/sched_min_task_util_for_colocation ${vendor.powerhal.sched_min_task_util_for_colocation}
+
+## sched powerhal
+
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
 
