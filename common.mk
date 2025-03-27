@@ -371,10 +371,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-sp/libjsoncpp.so:$(TARGET_COPY_OUT_VENDOR)/lib4/libjsoncpp-v30.so \
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
