@@ -48,6 +48,7 @@ blob_fixups: blob_fixups_user_type = {
     ('odm/bin/hw/vendor.oplus.hardware.charger-V6-service', 'odm/lib64/libGaiaClient_vnd.so'): blob_fixup()
         .add_needed('libbase_shim.so')
         .add_needed('libjsoncpp_shim.so')
+        .binary_regex_replace(b'_ZN4Json5ValueC1Ey', b'_ZN4Json5ValueC1Em')
         .replace_needed('libosenseaidlhalclient.so', 'libosenseaidlhalclient_charge.so')
         .replace_needed('vendor.oplus.hardware.charger-V6-ndk_platform.so', 'vendor.oplus.hardware.charger-V6-ndk.so')
         .replace_needed('vendor.oplus.hardware.osense.client-V1-ndk_platform.so', 'vendor.oplus.hardware.osense.client-V1-ndk.so'),
