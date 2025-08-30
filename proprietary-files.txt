@@ -459,7 +459,7 @@ vendor/lib64/vendor.qti.gnss@4.0.so
 system/lib64/libostatslog.so
 system_ext/bin/horae
 system_ext/etc/horae/horae.conf
-system_ext/etc/horae/horae_SM8350.conf
+system_ext/etc/horae/horae_SM8350.conf:odm/etc/horae/horae_target.conf
 system_ext/etc/init/horae.rc
 system_ext/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
 
