@@ -63,19 +63,6 @@
       ]
     },
     {
-      "Name": "NormalPerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": ""
-          }
-        }
-      ]
-    },
-    {
       "Name": "HighPerformance",
       "Actions": [
         {
@@ -408,18 +395,6 @@
     },
 
     {
-      "Name": "TimerSlackHigh",
-      "Actions": [
-        {
-          "Name": "SetTimerSlack",
-          "Params":
-          {
-            "Slack": "5000000"
-          }
-        }
-      ]
-    },
-    {
       "Name": "TimerSlackNormal",
       "Actions": [
         {
@@ -459,49 +434,6 @@
       ]
     },
 
-    {
-      "Name": "LowMemoryUsage",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "MemSoftLimit",
-            "Value": "16MB"
-          }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "MemSwappiness",
-            "Value": "150"
-
-          }
-        }
-      ]
-    },
-    {
-      "Name": "HighMemoryUsage",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "MemSoftLimit",
-            "Value": "512MB"
-          }
-        },
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "MemSwappiness",
-            "Value": "100"
-          }
-        }
-      ]
-    },
     {
       "Name": "SystemMemoryProcess",
       "Actions": [
