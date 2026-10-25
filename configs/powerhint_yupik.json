@@ -593,5 +593,29 @@
       "Duration": 0,
       "Value": "1"
     }
+  ],
+  "AdpfConfig": [
+    {
+      "Name": "ADPF_DEFAULT",
+      "PID_On": true,
+      "PID_Po": 5.0,
+      "PID_Pu": 3.0,
+      "PID_I": 0.001,
+      "PID_I_Init": 200,
+      "PID_I_High": 512,
+      "PID_I_Low": -30,
+      "PID_Do": 500.0,
+      "PID_Du": 0.0,
+      "SamplingWindow_P": 0,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 162,
+      "UclampMin_High": 480,
+      "UclampMin_Low": 2,
+      "ReportingRateLimitNs": 166666660,
+      "TargetTimeFactor": 1.4,
+      "StaleTimeFactor": 10.0
+    }
   ]
 }
