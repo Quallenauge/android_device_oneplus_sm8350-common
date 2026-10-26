@@ -611,7 +611,7 @@
       "SamplingWindow_D": 1,
       "UclampMin_On": true,
       "UclampMin_Init": 162,
-      "UclampMin_High": 480,
+      "UclampMin_High": 640,
       "UclampMin_Low": 2,
       "ReportingRateLimitNs": 166666660,
       "TargetTimeFactor": 1.4,
