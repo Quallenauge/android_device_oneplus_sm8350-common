@@ -162,6 +162,7 @@ echo 65 85 > /proc/sys/kernel/sched_downmigrate
 echo 100 > /proc/sys/kernel/sched_group_upmigrate
 echo 85 > /proc/sys/kernel/sched_group_downmigrate
 echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+echo 325 > /proc/sys/kernel/walt_low_latency_task_threshold
 
 
 echo 0 > /proc/sys/kernel/sched_coloc_busy_hysteresis_enable_cpus

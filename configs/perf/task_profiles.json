@@ -446,6 +446,62 @@
           }
         }
       ]
+    },
+    {
+      "Name": "LowLatencySet",
+      "Actions": [
+        {
+          "Name": "WriteFile",
+          "Params":
+          {
+            "FilePath": "/proc/sched_qos/low_latency_set",
+            "Value": "<pid>",
+            "LogFailures": "false"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "LowLatencyClear",
+      "Actions": [
+        {
+          "Name": "WriteFile",
+          "Params":
+          {
+            "FilePath": "/proc/sched_qos/low_latency_clear",
+            "Value": "<pid>",
+            "LogFailures": "false"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BoostMidSet",
+      "Actions": [
+        {
+          "Name": "WriteFile",
+          "Params":
+          {
+            "FilePath": "/proc/sched_qos/boost_mid_set",
+            "Value": "<pid>",
+            "LogFailures": "false"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BoostMidClear",
+      "Actions": [
+        {
+          "Name": "WriteFile",
+          "Params":
+          {
+            "FilePath": "/proc/sched_qos/boost_mid_clear",
+            "Value": "<pid>",
+            "LogFailures": "false"
+          }
+        }
+      ]
     }
   ],
 
@@ -493,6 +549,18 @@
     {
       "Name": "CPUSET_SP_RESTRICTED",
       "Profiles": [ "ServiceCapacityRestricted", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_QOS_NONE",
+      "Profiles": [ "LowLatencyClear", "BoostMidClear" ]
+    },
+    {
+      "Name": "SCHED_QOS_SENSITIVE_STANDARD",
+      "Profiles": [ "LowLatencySet" ]
+    },
+    {
+      "Name": "SCHED_QOS_SENSITIVE_EXTREME",
+      "Profiles": [ "LowLatencySet" ]
     }
   ]
 }
