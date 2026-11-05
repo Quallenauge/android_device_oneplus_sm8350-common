@@ -213,6 +213,15 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
+# Battery friendly charging: the "Charging speed" setting (IFastCharge) writes the
+# mode, vendor.oplus.charge-care limits the charge current depending on the temperature
+PRODUCT_PACKAGES += \
+    vendor.oplus.charge-care
+
+$(call soong_config_set,lineage_health,fast_charge_node,/data/vendor/charge_care/mode)
+$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,care)
+$(call soong_config_set,lineage_health,fast_charge_value_super_fast_charge,max)
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.oplus

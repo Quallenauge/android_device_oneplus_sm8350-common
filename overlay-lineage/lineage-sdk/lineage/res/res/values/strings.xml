@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Charging speed: battery friendly charging limits the charge current depending on the temperature -->
+    <string name="charging_speed_fast">Battery friendly</string>
+    <string name="charging_speed_super_fast">Maximum</string>
+</resources>
